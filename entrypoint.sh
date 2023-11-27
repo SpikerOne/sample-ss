@@ -20,6 +20,7 @@ mv /conf/shadowsocks-libev_config.json /etc/shadowsocks-libev/config.json
 cat /etc/shadowsocks-libev/config.json
 cat /etc/nginx/conf.d/ss.conf
 
+chmod +x /usr/bin/ss-server
 ss-server -c /etc/shadowsocks-libev/config.json &
 rm -rf /etc/nginx/sites-enabled/default
 nginx -g 'daemon off;'
